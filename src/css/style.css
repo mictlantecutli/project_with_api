@@ -291,5 +291,27 @@ footer {
   justify-content: space-between;
   align-items: center;
 
+}
 
+
+/* this is the css for astronomy news */
+
+
+#latestNews p {
+
+  flex: 1 1 45%;
+  margin: 0.25em;
+  padding: 0.5em;
+  border: 1px solid var(--light-grey);
+  max-width: 900px;
+  background-color: #a4b8c4;
+}
+
+.news {
+  background-color: rgb(5, 5, 32);
+  padding: 2em;
+}
+
+.news h2 {
+  color: #0511f5;
 }

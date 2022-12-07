@@ -32,7 +32,8 @@ const dataSource = new ExternalServices();
 console.log(dataSource.getData());
 
 
-const listEle = document.querySelector("#latestNews");
+const listEle = document.getElementById("latestNews");
+
 
 const listItems = new ProductList(dataSource, listEle);
 
