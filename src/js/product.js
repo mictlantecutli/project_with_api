@@ -3,9 +3,8 @@ import ProductDetails from "./productDetails.js";
 
 import { getParams } from "./utils.js";
 
-const dataSource = new ExternalServices("tents");
-
-//console.log(dataSource.getData());
+const dataSource = new ExternalServices();
+console.log(dataSource.getData());
 
 const productId = getParams("product");
 
