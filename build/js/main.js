@@ -1,11 +1,11 @@
 import ExternalServices from "./externalServices.js";
 import ProductList from "./productList.js";
 
-import {
+/*import {
   loadHeaderFooter
 } from "./utils.js";
 
-loadHeaderFooter();
+loadHeaderFooter();*/
 
 const dataSource = new ExternalServices();
 
