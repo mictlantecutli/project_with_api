@@ -24,63 +24,39 @@ export default class ExternalServices {
     /*return fetch(baseURL + `products/search/${category}`)
       .then(convertToJson).then((data) => data.Result);*/
 
-      var newsAPIkey = "nrjs2TtoQ78Gp18Z8dfJ2T3hCPaztLnN";
+    var newsAPIkey = "nrjs2TtoQ78Gp18Z8dfJ2T3hCPaztLnN";
 
-      //Fetch news from NYT api
-      
-      var newsQueryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=astronomy&nasa&outerspace&api-key=" + newsAPIkey;
-      return fetch(newsQueryUrl)
+    //Fetch news from NYT api
+
+    var newsQueryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=astronomy&nasa&outerspace&api-key=" + newsAPIkey;
+    return fetch(newsQueryUrl)
       .then(convertToJson).then((data) => data.response);
 
-   
-    
-
   }
 
-  /*async findProductById(id) {
-    //const products = await this.getData();
-    //return products.find(function (item) {
-    //  return item.Id === id;
-    //});
-    return await fetch(baseURL + `product/${id}`).then(convertToJson).then((data) => data.Result);
+  getDataImageDay() {
+
+    var nasaAPIkey = "SQKoo6jP08hfkgHg362NN1LcC764IvyXXGEx5Swr";
+
+    //Fetch news from NYT api
+
+    var nasaQueryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + nasaAPIkey;
+    //return fetch(nasaQueryUrl)
+    //  .then(convertToJson).then((data) => data.response);
+
+
+    return fetch(nasaQueryUrl)
+      .then(function (response) {
+        //console.log(response);
+        return response.json()
+
+      })
+      .then(function (data) {
+        return data
+        console.log(data.date);
+        
+      })
+
   }
-
-
-
-  async checkout(payload) {
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-
-    };
-    return await fetch(baseURL + 'checkout/', options).then(convertToJson);
-  }
-
-  async loginRequest(user) {
-    const options = {
-      method: 'POST',
-      headers: {
-        'content-Type': 'application/json'
-      },
-      body: JSON.stringify(user)
-    }
-    const response = await fetch(baseURL + 'login', options).then(convertToJson);
-    return response.accessToken;
-  }
-
-  async getOrders(token) {
-    const options = {
-      method: 'GET',
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    }
-    const response = await fetch(baseURL + 'orders', options).then(convertToJson);
-    return response;
-  }
-*/
 
 }

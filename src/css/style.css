@@ -23,6 +23,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--font-base);
   color: var(--dark-grey);
+
 }
 
 img {
@@ -32,12 +33,13 @@ img {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 10px;
 }
 
 .logo {
   line-height: 60px;
-  width: 245px;
+  width: 300px;
   overflow: hidden;
   display: flex;
   font-size: 30px;
@@ -52,7 +54,17 @@ header {
 
 .logo a {
   text-decoration: none;
-  color: var(--font-body);
+  color: var(--primary-color);
+
+}
+
+
+
+
+.cart a img {
+  width: 60px;
+  height: 60px;
+
 }
 
 .hero {
@@ -91,7 +103,7 @@ header {
 
 /* utility classes */
 .highlight {
-  color: var(--tertiary-color);
+  color: black;
 }
 
 button {
@@ -106,6 +118,9 @@ button {
 
 .divider {
   border-bottom: 2px solid var(--primary-color);
+
+
+
 }
 
 /* End utility classes */
@@ -235,6 +250,35 @@ button {
     font-size: 1.2em;
   }
 
+  .mission #news_sample {
+    font-size: 2em;
+    text-align: center;
+    border-style: dotted;
+    border-color: #0b155a;
+    color: #0b155a;
+    background-color: #f7e2a3;
+  }
+
+  .mission p {
+    font-size: 1.3em;
+
+    text-align: center;
+  }
+
+  .mission .call_action {
+    font-size: 1em;
+    /*color: #f5bc0f;*/
+    text-align: center;
+  }
+
+  .mission .call_action .icon_hand {
+    font-size: 1.5em;
+  }
+
+
+
+
+
   .cart-card {
     font-size: inherit;
     grid-template-columns: 150px auto 15%;
@@ -244,6 +288,25 @@ button {
 footer {
   font-size: var(--small-font);
   padding: 1em;
+  background-color: #ffffff;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer .font-bold {
+  font-weight: bold;
+}
+
+footer .font-normal {
+  color: black;
+  text-decoration: none;
+}
+
+footer .hover:hover {
+  font-weight: bold;
+
 }
 
 /* grid icons */
@@ -251,6 +314,7 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
+  padding: 0%;
 
 }
 
@@ -260,6 +324,8 @@ footer {
   margin: 10px;
   padding: 10px;
 }
+
+
 
 .grid-categories h2 {
   font-size: 20px;
@@ -303,15 +369,134 @@ footer {
   margin: 0.25em;
   padding: 0.5em;
   border: 1px solid var(--light-grey);
+  border-radius: 5px;
   max-width: 900px;
   background-color: #a4b8c4;
+
 }
 
 .news {
-  background-color: rgb(5, 5, 32);
+  background-color: #0b155a;
+  /*background-color: rgb(5, 5, 32);*/
   padding: 2em;
 }
 
+
+
+
 .news h2 {
-  color: #0511f5;
+  color: #fefefe;
+
+}
+
+
+
+/*Code for the page of photo of the day*/
+#day_photo {
+  display: grid;
+  grid-template-columns: 1fr;
+
+
+}
+
+#day_photo h2 {
+  color: #f0a868;
+  ;
+  text-align: center;
+
+}
+
+#day_photo p {
+  color: #f0a868;
+  ;
+  text-align: center;
+
+}
+
+#day_photo img {
+  /*margin: 1.5em auto;*/
+  margin: 0 auto;
+  padding: 10px;
+  width: 600px;
+}
+
+/*The background color for the header of the page*/
+
+#head {
+  background-color: #ffffff;
+}
+
+
+/*This code is to animate the categories incons of the main index.html*/
+#icon1 #icon2 {
+
+  width: 150px;
+}
+
+@keyframes morphCircle {
+
+
+  50% {
+
+    transform: rotate(0deg);
+  }
+
+  75% {
+
+    transform: rotate(-90deg);
+  }
+
+  100% {
+
+    transform: rotate(-180deg);
+  }
+}
+
+
+/*code for the form*/
+
+form button.btn_form {
+  border-radius: 1rem;
+}
+
+form .join_us {
+  display: grid;
+  justify-content: center;
+  color: black;
+}
+
+.square_form form {
+  height: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.square_form form input {
+  margin: 5px;
+}
+
+.square_form form button {
+  background-color: #f6c72a;
+}
+
+.checkout>h2 {
+  text-align: center;
+  font-size: 3em;
+  color: #0b155a;
+}
+
+.join_us>h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #17289d;
+}
+
+/*Thanks page*/
+.container_thanks {
+  text-align: center;
+  background-color: #0b155a;
+  color: #f0a868;
+  border-bottom: 2.5px solid #f0a868;
 }

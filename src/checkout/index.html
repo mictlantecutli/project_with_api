@@ -1,78 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sleep Outside | Checkout</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    
-  </head>
-  <body>
-    <header class="divider" id= "head"></header>
-    <main class="divider checkout">
-      <h2>Review & Place your Order</h2>
-      <section class="checkout-form">
-        <form name="checkout">
-          <fieldset>
-            <legend>Shipping</legend>
-            <div class="checkout-name">
-              <label for="fname">First Name</label>
-              <input type="text" name="fname" required>
-              <label for="lname">Last Name</label>
-              <input type="text" name="lname" required>
-            </div>
-            <div class="checkout__address">
-              <label for="street">Street</label>
-              <input type="text" name="street" required>
-              <label for="city">City</label>
-              <input type="text" name="city" required>
-              <label for="state">State</label>
-              <input type="text" name="state" required>
-              <label for="zip">Zip</label>
-              <input type="text" name="zip" id="zip" required>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Payment</legend>
-            <label for="cardNumber">Card Number</label>
-            <input type="text" name="cardNumber" required>
-            <label for="expiration">Expiration</label>
-            <input type="text" name="expiration" required>
-            <label for="code">Security Code</label>
-            <input type="text" name="code" required>
-          </fieldset>
-          <fieldset class="checkout-summary">
-            <legend>Order Summary</legend>
-            <ul>
-              <li>
-                <label for="cartTotal">Item Subtotal(<span id="num-items"></span>)</label>
-                <p name="cartTotal" id="cartTotal"></p>
 
-              </li>
-              <li>
-                <label for="shipping">Shipping Estimate</label>
-                <p id="shipping"></p>
-              </li>
-              <li>
-                <label for="tax">Tax</label>
-                <p id="tax"></p>
-              </li>
-              <li>
-                <label for="orderTotal"><b>Order Total</b></label>
-                <p id="orderTotal"></p>
-              </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universe Infinite | Subscribe</title>
+  <link rel="stylesheet" href="../css/style.css" />
 
-            </ul>
+</head>
 
-          </fieldset>
+<body>
+  <header class="divider" id="head"></header>
+  <main class="divider checkout">
+    <h2>Subscribe to our newsletter!</h2>
+    <section class="checkout-form">
+      <div class="join_us">
+        <h2>Join to Universe Infinite! the best way to stay informed about the latest in astronomy</h2>
+      </div>
+      <div class="square_form">
+        <form method="get" action="../checkout/thanks.html">
 
-          <button id="checkoutSubmit" type="submit">Checkout</button>
+          <input type="text" name="fname" placeholder="Your Name*" required>
+
+
+          <input type="text" name="email" placeholder="Your Email*" required>
+          <input type="text" name="zipCode" pattern="[0-9]{5}" placeholder="Zip Code*">
+
+          <button class="btn_form" type="submit" value="submit">Subscribe!</button>
+
 
         </form>
+      </div>
 
-      </section>
-    </main>
-    <footer id= "foot"></footer>
-    <script src="../js/checkout.js" type="module"></script>
-  </body>
+
+    </section>
+  </main>
+  <footer id="foot"></footer>
+  <script src="../js/checkout.js" type="module"></script>
+</body>
+
 </html>

@@ -9,6 +9,19 @@ export default class ProductList {
     this.listElement = listElement;
   }
 
+  async news_sample() {
+    const news = await this.dataSource.getData()
+    //console.log(news.docs[1])
+    var rand = Math.floor(Math.random() * news.docs.length);
+    //console.log(rand)
+    var rValue = news.docs[rand].snippet;
+    console.log(rValue)
+
+    var snippet = document.getElementById("news_sample");
+    snippet.innerText = rValue
+
+  }
+
   async init() {
     const newsData = await this.dataSource.getData();
     //console.log(newsData);
@@ -17,15 +30,15 @@ export default class ProductList {
 
 
 
-   
-    for (var i = 0; i < newsData.docs.length; i++) {
-      var newsUrl = newsData.docs[i].web_url;
 
-    
+    for (var i = 0; i < newsData.docs.length; i++) {
+      //var newsUrl = newsData.docs[i].web_url;
+
+
       //console.log(newsUrl);
       var newsTitle = newsData.docs[i].abstract;
 
-      console.log(newsTitle);
+      //console.log(newsTitle);
 
 
       const listEle = document.getElementById("latestNews");
@@ -34,18 +47,12 @@ export default class ProductList {
 
       pharagraph.innerText = newsTitle
 
-
-
-      
-
-   
-    
-   
-
     }
-    
+
+
+
     //console.log(textList);
- 
+
 
 
     //lenght_news = newsData.response.docs.length;
@@ -84,24 +91,24 @@ export default class ProductList {
 
 
 
-      //Use tailwindcss group list: https://flowbite.com/docs/components/list-group/
-      //let latestNewsEl = $('<li>');
-      //latestNewsEl.addClass("block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white").append([i+1],". <a href='" + newsUrl + "' target='_blank'>" + newsTitle + "</a>");
-      //latestNewsEl.append($('<br>'));
-      //newsListEl.append(latestNewsEl);
-    
+    //Use tailwindcss group list: https://flowbite.com/docs/components/list-group/
+    //let latestNewsEl = $('<li>');
+    //latestNewsEl.addClass("block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white").append([i+1],". <a href='" + newsUrl + "' target='_blank'>" + newsTitle + "</a>");
+    //latestNewsEl.append($('<br>'));
+    //newsListEl.append(latestNewsEl);
+
 
   }
-/*
-  prepareTemplate(template, product) {
-    template.querySelector("a").href += product.docs[i].abstract;
-    template.querySelector("img").src = product.docs[i].abstract;
-    template.querySelector("img").alt += product.docs[i].abstract;
-    template.querySelector(".card__brand").textContent = product.docs[i].abstract;
-    template.querySelector(".card__name").textContent = product.docs[i].abstract;
-    template.querySelector(".product-card__price").textContent +=
-      product.docs[i].abstract;
-    return template;
-  }
-  */
+  /*
+    prepareTemplate(template, product) {
+      template.querySelector("a").href += product.docs[i].abstract;
+      template.querySelector("img").src = product.docs[i].abstract;
+      template.querySelector("img").alt += product.docs[i].abstract;
+      template.querySelector(".card__brand").textContent = product.docs[i].abstract;
+      template.querySelector(".card__name").textContent = product.docs[i].abstract;
+      template.querySelector(".product-card__price").textContent +=
+        product.docs[i].abstract;
+      return template;
+    }
+    */
 }

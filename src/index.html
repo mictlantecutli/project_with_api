@@ -4,45 +4,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sleep Outside | Home</title>
+  <title>Astronomy at Hand | Home</title>
   <link rel="stylesheet" href="css/style.css" />
 
   <script src="js/main.js" type="module"></script>
 </head>
 
 <body>
+
   <header class="divider" id='head'></header>
   <main class="divider">
     <div class="hero">
       <img src="images/hero_universe_img.webp" alt="image of the space, the universe" />
+      <!--
       <div class="logo logo--square">
-        <img src="images/noun_Tent_2517.svg" alt="tent image for logo" />
+        <img src="images/logo_universe.png" alt="tent image for logo" />
         <div>Sleep<span class="highlight">Outside</span></div>
       </div>
+    -->
     </div>
     <section class="mission">
-      <p>We spend too much time these days indoors...sitting usually.</p>
-      <p>No wonder we are a mess!</p>
+      <p id="news_sample"></p>
       <p>
-        What we really need is to get outside...in fact SLEEP outside. Our
-        mission is to provide you with everything you need to do this
-        comfortably at an affordable price.
+        If you want to know more about this Astronomy news...
       </p>
+      <p class="call_action">Below <span class="icon_hand">👇</span>, Wait 2 second over the icon and <b>'click'</b></p>
+
     </section>
     <section class="products">
 
       <ul class="grid-categories">
         <li>
-          <a href="product-listing/index.html?category=tents"><img src="images/camera_icon.png"
-              alt="Tent Icon from Noun Project: Mustofa Bayu"></a>
-          <h2>Photo of the Day</h2>
+          <div id="icon1">
+            <a href="product-listing/index.html?category=tents"><img src="images/news_two.png"
+                alt="Icon representing news"></a>
+          </div>
+          <h2>Latest News</h2>
+
         </li>
+
         <li>
-          <a href="product-listing/index.html?category=backpacks"><img
-              src="https://byui-cit.github.io/wdd330/images/category-icons/noun_carrier%20bag_3544771.svg"
-              alt="Backpack Icon from Noun Project: Mustofa Bayu"></a>
-          <h2>Backpacks</h2>
+          <div id="icon2">
+            <a href="page_photo_day/index.html"><img src="images/camera_icon.png" alt="Image of day from the NASA"></a>
+          </div>
+          <h2>Image of Day</h2>
         </li>
+
+        <!--
         <li>
           <a href="product-listing/index.html?category=sleeping-bags"><img
               src="https://byui-cit.github.io/wdd330/images/category-icons/noun_Sleeping%20Bag_3544775.svg"
@@ -55,11 +63,14 @@
               alt="Hammock Icon from Noun Project: Paul Richard"></a>
           <h2>Hammocks</h2>
         </li>
+      -->
 
       </ul>
     </section>
   </main>
   <footer id='foot'></footer>
 </body>
+
+
 
 </html>

@@ -3,6 +3,7 @@ import CheckoutProcess from './checkoutprocess.js';
 
 loadHeaderFooter();
 
+/*
 const myCheckout = new CheckoutProcess('so-cart', '.checkout-summary');
 console.log(myCheckout);
 myCheckout.init();
@@ -15,5 +16,6 @@ document.querySelector('#checkoutSubmit').addEventListener('click', (e) => {
 
   myCheckout.checkout();
 });
+*/
 
 

@@ -1,5 +1,6 @@
 import ExternalServices from "./externalServices.js";
-import ProductList from "./productList.js";
+import ListImageDay from "./listImageDay.js";
+//import ProductList from "./productList.js";
 import { getParams, loadHeaderFooter } from "./utils.js";
 
 /*loadHeaderFooter();
@@ -31,15 +32,15 @@ for (var i = 0; i < newsData.response.docs.length; i++) {
 
 loadHeaderFooter();
 
-const dataSource = new ExternalServices();
+const dataSourceNasa = new ExternalServices();
 //console.log(dataSource.getData());
 //console.log(dataSource.getDataImageDay());
 
 
-const listEle = document.getElementById("latestNews");
+const listEle = document.getElementById("day_Photo");
 
 
-const listItems = new ProductList(dataSource, listEle);
+const listItems = new ListImageDay(dataSourceNasa, listEle);
 
 
 listItems.init();
