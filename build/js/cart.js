@@ -1,11 +1,1 @@
-import { loadHeaderFooter } from "./utils.js";
-import ShoppingCart from './shoppingCart.js';
-
-loadHeaderFooter();
-
-const cart = new ShoppingCart('so-cart', document.querySelector('.product-list'));
-cart.init();
-
-
-
-
+import{loadHeaderFooter as o}from"./utils.js";import t from"./shoppingCart.js";o();const r=new t("so-cart",document.querySelector(".product-list"));r.init();

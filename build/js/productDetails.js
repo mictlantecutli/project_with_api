@@ -1,42 +1,4 @@
-import { setLocalStorage, loadHeaderFooter, getLocalStorage } from "./utils.js";
-
-loadHeaderFooter();
-
-export default class ProductDetails {
-  constructor(productId, dataSource) {
-    this.productId = productId;
-    this.product = {};
-    this.dataSource = dataSource;
-  }
-
-  async init() {
-    // use our datasource to get the details for the current product. findProductById will return a promise! use await or .then() to process it
-    this.product = await this.dataSource.findProductById(this.productId);
-
-    // once we have the product details we can render out the HTML
-    document.querySelector("main").innerHTML = this.renderProductDetails();
-
-    // once the HTML is rendered we can add a listener to Add to Cart button
-    // Notice the .bind(this). Our callback will not work if we don't include that line. Review the readings from this week on 'this' to understand why.
-    document.getElementById("addToCart").addEventListener("click", this.addToCart.bind(this));
-  }
-
-  addToCart() {
-    
-    let cartContents = getLocalStorage('so-cart');
-   
-    if(!cartContents){
-      cartContents = [];
-      
-    }
-
-    cartContents.push(this.product);
-    setLocalStorage('so-cart', cartContents);
-      
-  }
-
-  renderProductDetails() {
-    return `<section class="product-detail"> <h3>${this.product.Brand.Name}</h3>
+var s=(i,t,r)=>new Promise((e,c)=>{var u=d=>{try{o(r.next(d))}catch(a){c(a)}},p=d=>{try{o(r.throw(d))}catch(a){c(a)}},o=d=>d.done?e(d.value):Promise.resolve(d.value).then(u,p);o((r=r.apply(i,t)).next())});import{setLocalStorage as l,loadHeaderFooter as n,getLocalStorage as h}from"./utils.js";n();export default class m{constructor(t,r){this.productId=t,this.product={},this.dataSource=r}init(){return s(this,null,function*(){this.product=yield this.dataSource.findProductById(this.productId),document.querySelector("main").innerHTML=this.renderProductDetails(),document.getElementById("addToCart").addEventListener("click",this.addToCart.bind(this))})}addToCart(){let t=h("so-cart");t||(t=[]),t.push(this.product),l("so-cart",t)}renderProductDetails(){return`<section class="product-detail"> <h3>${this.product.Brand.Name}</h3>
     <h2 class="divider">${this.product.NameWithoutBrand}</h2>
     <img
       class="divider"
@@ -50,6 +12,4 @@ export default class ProductDetails {
     </p>
     <div class="product-detail__add">
       <button id="addToCart" data-id="${this.product.Id}">Add to Cart</button>
-    </div></section>`;
-  }
-}
+    </div></section>`}}
