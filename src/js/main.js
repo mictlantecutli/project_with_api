@@ -7,7 +7,7 @@ import { getParams, loadHeaderFooter } from "./utils.js";
 } from "./utils.js";
 
 loadHeaderFooter();*/
-loadHeaderFooter();
+// loadHeaderFooter();
 
 const dataSource = new ExternalServices();
 
